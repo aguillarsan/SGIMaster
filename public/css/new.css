@@ -1,0 +1,95 @@
+.boxBounce:hover {
+    transform: scale(1.1);
+    z-index: 100;
+    transition: transform 0.5s;
+
+}
+.boxBottomBounce:hover {
+    transform: scale(1.0);
+}
+.boxModuls:hover {
+    transition: transform 0.5s;
+}
+.tranformverde:hover {
+    background-color: #42e8b4;
+}
+.greyHover:hover {
+    background-color: #f9f9f9;
+}
+.greymod {
+    background-color: #35363a;
+}
+.blue {
+    background-color: #005cff;
+}
+.pag {
+    background-color: #005cff !important; 
+    color: white !important; 
+}
+.tarjetaBack {
+    background-image: linear-gradient(rgb(0, 92, 255), (#007bff99);
+}
+.fontverde {
+    color: #42e8b4;
+}
+.fondomodulo {
+    background-image: url("/logosEntel/newfond.png ");
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100%;
+    width: : 100%;
+}
+.f_texto {
+    background-image: url("/logosEntel/texto-entel.png ");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.grisFont {
+    color: #6c757d;
+}
+.fontBlueShow {
+    color: #005cff;
+}
+.changeColor:hover {
+    background-color: red;
+}
+.barlow {
+    font-family: 'Barlow', sans-serif
+}
+.bold {
+    font-weight: 700 !important
+}
+.semi_bold {
+    font-weight: 600 !important
+}
+.regular {
+    font-weight: 400 !important
+}
+.font_md_b {
+    font-size: 15px
+}
+.text_c {
+    text-align: center;
+}
+.card_module_box {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.5s;
+}
+.border-bottom-radius {
+    border-bottom-right-radius: 50% 40%;
+}
+.zoom {
+    padding: 50px;
+    transition: transform .2s;
+    /* Animation */
+    margin: 0 auto;
+}
+.zoom:hover {
+    transform: scale(1.5);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}

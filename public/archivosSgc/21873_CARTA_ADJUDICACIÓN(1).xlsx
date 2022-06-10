@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport"/>
+        <title>
+            SGI|Sistema Gestión Infraestructura
+        </title>
+        <!-- General CSS Files -->
+        <!-- Desarrollado por Sebastián Aguilar Sanhueza -->
+        <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+           
+            <!-- CSS Libraries -->
+            <!-- Template CSS -->
+            <link href="layout/css/components.css" rel="stylesheet"/>
+            <!-- Start GA -->
+            <!-- /END GA -->
+        </link>
+        <link href="https://getbootstrap.com/docs/4.5/components/tooltips/" rel="canonical"/>
+        <link href="../css/new.css" rel="stylesheet"/>
+        <link href="../inspinia/css/animate.css" rel="stylesheet"/>
+        <link href="../logosEntel/l-2020.png" rel="shortcut icon"/>
+        <link href="https://getbootstrap.com/docs/4.5/components/toasts/" rel="canonical"/>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet"/>
+         <link href="../fontaws/css/all.css" rel="stylesheet"/>
+        <meta charset="utf-8" content="yRF6ktdlNr26HSJLRojBXBK0faU8L7XRUgW6CPZM" name="csrf-token">
+        </meta>
+    </head>
+    <body class=" " style="background-image: url('../logosEntel/newfond.png '); background-size: cover; height: 100%;
+   width: : 100%;">
+        <div id="app">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="/">
+                    <img src="../logosEntel/l-b-2020.png" width="100">
+                    </img>
+                </a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <h2 class="title bold barlow" style="font-size: 20px;color: white;margin-top:5px  ;font-family:'Barlow', sans-serif;font-weight: 700 !important">
+                                Sistema de Gestión Infraestructura
+                            </h2>
+                            <h3 class="semi_bold barlow" style="font-size: 15px;color: white;margin-top: -8px;font-family:'Barlow', sans-serif;font-weight: 600 !important">
+                                Subgerencia Infraestructura, Poder y Clima
+                            </h3>
+                            <p class="regular barlow" style="margin-top: -10px;color: white;font-family:'Barlow', sans-serif;font-weight: 400 !important">
+                                Gerencia O&M Redes de Acceso
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-right">
+                       
+                        <li class="dropdown" style="margin-top: -8px">
+                            <a class="nav-link dropdown-toggle nav-link-lg nav-link-user" data-toggle="dropdown" href="#">
+                                <img alt="image" class="rounded-circle mr-1" src="   ../responsables/default.png" width="40">
+                                    <div class="d-sm-none d-lg-inline-block">
+                                        Soporte  Plataformas
+                                    </div>
+                                </img>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item has-icon " href="#" onclick="changePassword()" id="pass"  >
+                                    <i class="fas fa-cog">
+                                    </i>
+                                    Cambiar contraseña
+                                </a>
+
+                                <a class="dropdown-item has-icon text-danger" href="http://127.0.0.1:8000//Formatos_reporte/formato_dd_sap.xlsx/logout" onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit(); ">
+                                    <i class="fas fa-sign-out-alt">
+                                    </i>
+                                    Cerrar sesión
+                                </a>
+                                <form action="http://127.0.0.1:8000//Formatos_reporte/formato_dd_sap.xlsx/logout" id="logout-form" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="yRF6ktdlNr26HSJLRojBXBK0faU8L7XRUgW6CPZM">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="main-content container" style="margin-top: 95px;">
+                <div class="wrapper wrapper-content">
+                    
+                    <div style="margin-top: 30px;">
+                        <indexsgi :modulos="'[{&quot;id&quot;:1,&quot;nombre&quot;:&quot;Gesti\u00f3n de tickets (GTI)&quot;,&quot;descripcion&quot;:&quot;Modulo de tickets de trabajo.&quot;,&quot;icono&quot;:&quot;fas fa-ticket-alt&quot;,&quot;color&quot;:&quot;#00c6ff ,#0072ff&quot;,&quot;ruta&quot;:&quot;\/home&quot;,&quot;permiso_id&quot;:143,&quot;informacion&quot;:&quot;M\u00f3dulo encargado de centralizar, distribuir y gestionar las tareas de la subgerencia infraestructura, poder y clima como tambi\u00e9n para los CRM.&quot;,&quot;order&quot;:1},{&quot;id&quot;:7,&quot;nombre&quot;:&quot;Inventario&quot;,&quot;descripcion&quot;:&quot;Modulo de gesti\u00f3n de pops.&quot;,&quot;icono&quot;:&quot;fas fa-globe-americas&quot;,&quot;color&quot;:&quot;#b8e2fb, #54b4ec&quot;,&quot;ruta&quot;:&quot;http:\/\/172.16.100.102\/&quot;,&quot;permiso_id&quot;:156,&quot;informacion&quot;:&quot;Relaci\u00f3n detallada y ordenada de los elementos que componen el patrimonio de entel a nivel de infraestructura, poder y clima&quot;,&quot;order&quot;:2},{&quot;id&quot;:2,&quot;nombre&quot;:&quot;Gesti\u00f3n de costos (SGC)&quot;,&quot;descripcion&quot;:&quot;Modulo de contabilidad.&quot;,&quot;icono&quot;:&quot;fas fa-dollar-sign&quot;,&quot;color&quot;:&quot;#1e5e98 ,#0f0c29&quot;,&quot;ruta&quot;:&quot;\/sgc\/0&quot;,&quot;permiso_id&quot;:144,&quot;informacion&quot;:&quot;M\u00f3dulo dise\u00f1ado para controlar\/analizar la gesti\u00f3n de los gastos de la subgerencia.&quot;,&quot;order&quot;:3},{&quot;id&quot;:10,&quot;nombre&quot;:&quot;Ticketera de conexiones&quot;,&quot;descripcion&quot;:&quot;Tickets para conexiones de sitios Core.&quot;,&quot;icono&quot;:&quot;fas fa-project-diagram&quot;,&quot;color&quot;:&quot;#90F7EC ,#32CCBC&quot;,&quot;ruta&quot;:&quot;\/ticket-ing&quot;,&quot;permiso_id&quot;:184,&quot;informacion&quot;:&quot;Modulo en cual se generan tickets para realizar conexiones en sitios Core&quot;,&quot;order&quot;:4},{&quot;id&quot;:3,&quot;nombre&quot;:&quot;Gesti\u00f3n de activos  (PSA)&quot;,&quot;descripcion&quot;:&quot;Modulo de solicitud de activos.&quot;,&quot;icono&quot;:&quot;fas fa-truck-loading&quot;,&quot;color&quot;:&quot;#fea858 ,#ed765e&quot;,&quot;ruta&quot;:&quot;\/psa&quot;,&quot;permiso_id&quot;:145,&quot;informacion&quot;:&quot;M\u00f3dulo que permite  gestionar las solicitudes de activos as\u00ed tambi\u00e9n como su correcta trazabilidad.&quot;,&quot;order&quot;:5},{&quot;id&quot;:4,&quot;nombre&quot;:&quot;Repositorio de archivos &quot;,&quot;descripcion&quot;:&quot;Modulo de gesti\u00f3n de archivos.&quot;,&quot;icono&quot;:&quot;fas fa-folder-open&quot;,&quot;color&quot;:&quot;#ff8ddb ,#bb73e0&quot;,&quot;ruta&quot;:&quot;\/repositorio&quot;,&quot;permiso_id&quot;:146,&quot;informacion&quot;:&quot;M\u00f3dulo que funciona como repositorio de archivos, el cual permite compartir informaci\u00f3n con personas seleccionadas dentro de la subgerencia.&quot;,&quot;order&quot;:6},{&quot;id&quot;:11,&quot;nombre&quot;:&quot;Eficiencia energ\u00e9tica (PEE)&quot;,&quot;descripcion&quot;:&quot;Proyecto de eficiencia energ\u00e9tica.&quot;,&quot;icono&quot;:&quot;fas fa-bolt&quot;,&quot;color&quot;:&quot;#0D4AD3,#10069F&quot;,&quot;ruta&quot;:&quot;http:\/\/172.16.100.125\/pee\/&quot;,&quot;permiso_id&quot;:185,&quot;informacion&quot;:&quot;Proyecto de eficiencia energetica.&quot;,&quot;order&quot;:7},{&quot;id&quot;:12,&quot;nombre&quot;:&quot;Reportes&quot;,&quot;descripcion&quot;:&quot;Generador de reportes&quot;,&quot;icono&quot;:&quot;fas fa-box-archive&quot;,&quot;color&quot;:&quot;#bdc3c7,#2c3e50&quot;,&quot;ruta&quot;:&quot;\/reports&quot;,&quot;permiso_id&quot;:201,&quot;informacion&quot;:&quot;Modulo para generar reportes de todas las plataformas&quot;,&quot;order&quot;:8},{&quot;id&quot;:9,&quot;nombre&quot;:&quot;Administraci\u00f3n de usuarios&quot;,&quot;descripcion&quot;:&quot;Modulo de gesti\u00f3n de usuarios.&quot;,&quot;icono&quot;:&quot;fas fa-user&quot;,&quot;color&quot;:&quot;#9ebaf3 ,#353a5f&quot;,&quot;ruta&quot;:&quot;\/admin&quot;,&quot;permiso_id&quot;:148,&quot;informacion&quot;:&quot;M\u00f3dulo desde la cual se administran los roles y permisos de cada usuario dentro de la suite de soluciones Anida.&quot;,&quot;order&quot;:9}]'" :permisos="'[{&quot;permission_id&quot;:116},{&quot;permission_id&quot;:117},{&quot;permission_id&quot;:118},{&quot;permission_id&quot;:119},{&quot;permission_id&quot;:120},{&quot;permission_id&quot;:121},{&quot;permission_id&quot;:124},{&quot;permission_id&quot;:125},{&quot;permission_id&quot;:126},{&quot;permission_id&quot;:150},{&quot;permission_id&quot;:143},{&quot;permission_id&quot;:144},{&quot;permission_id&quot;:145},{&quot;permission_id&quot;:146},{&quot;permission_id&quot;:148},{&quot;permission_id&quot;:149},{&quot;permission_id&quot;:155},{&quot;permission_id&quot;:156},{&quot;permission_id&quot;:157},{&quot;permission_id&quot;:147},{&quot;permission_id&quot;:136},{&quot;permission_id&quot;:153},{&quot;permission_id&quot;:132},{&quot;permission_id&quot;:133},{&quot;permission_id&quot;:137},{&quot;permission_id&quot;:138},{&quot;permission_id&quot;:162},{&quot;permission_id&quot;:127},{&quot;permission_id&quot;:128},{&quot;permission_id&quot;:129},{&quot;permission_id&quot;:164},{&quot;permission_id&quot;:13},{&quot;permission_id&quot;:43},{&quot;permission_id&quot;:40},{&quot;permission_id&quot;:52},{&quot;permission_id&quot;:42},{&quot;permission_id&quot;:101},{&quot;permission_id&quot;:112},{&quot;permission_id&quot;:19},{&quot;permission_id&quot;:44},{&quot;permission_id&quot;:158},{&quot;permission_id&quot;:108},{&quot;permission_id&quot;:159},{&quot;permission_id&quot;:160},{&quot;permission_id&quot;:100},{&quot;permission_id&quot;:102},{&quot;permission_id&quot;:81},{&quot;permission_id&quot;:109},{&quot;permission_id&quot;:77},{&quot;permission_id&quot;:92},{&quot;permission_id&quot;:78},{&quot;permission_id&quot;:167},{&quot;permission_id&quot;:168},{&quot;permission_id&quot;:169},{&quot;permission_id&quot;:171},{&quot;permission_id&quot;:172},{&quot;permission_id&quot;:173},{&quot;permission_id&quot;:174},{&quot;permission_id&quot;:175},{&quot;permission_id&quot;:140},{&quot;permission_id&quot;:63},{&quot;permission_id&quot;:62},{&quot;permission_id&quot;:64},{&quot;permission_id&quot;:65},{&quot;permission_id&quot;:66},{&quot;permission_id&quot;:67},{&quot;permission_id&quot;:68},{&quot;permission_id&quot;:69},{&quot;permission_id&quot;:70},{&quot;permission_id&quot;:71},{&quot;permission_id&quot;:72},{&quot;permission_id&quot;:73},{&quot;permission_id&quot;:74},{&quot;permission_id&quot;:97},{&quot;permission_id&quot;:170},{&quot;permission_id&quot;:98},{&quot;permission_id&quot;:99},{&quot;permission_id&quot;:141},{&quot;permission_id&quot;:142},{&quot;permission_id&quot;:173},{&quot;permission_id&quot;:14},{&quot;permission_id&quot;:176},{&quot;permission_id&quot;:180},{&quot;permission_id&quot;:184},{&quot;permission_id&quot;:185},{&quot;permission_id&quot;:186},{&quot;permission_id&quot;:187},{&quot;permission_id&quot;:86},{&quot;permission_id&quot;:90},{&quot;permission_id&quot;:188},{&quot;permission_id&quot;:189},{&quot;permission_id&quot;:13},{&quot;permission_id&quot;:14},{&quot;permission_id&quot;:165},{&quot;permission_id&quot;:190},{&quot;permission_id&quot;:191},{&quot;permission_id&quot;:192},{&quot;permission_id&quot;:193},{&quot;permission_id&quot;:194},{&quot;permission_id&quot;:195},{&quot;permission_id&quot;:196},{&quot;permission_id&quot;:197},{&quot;permission_id&quot;:198},{&quot;permission_id&quot;:199},{&quot;permission_id&quot;:200},{&quot;permission_id&quot;:201}]'">
+                        </indexsgi>
+                    </div>
+                </div>
+                <cambiarcontrasenia></cambiarcontrasenia>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- General JS Scripts -->
+<script src="../jquery/jquery-3.3.1.min.js">
+</script>
+<script src="../jquery/popper.min.js">
+</script>
+<script src="../bootstrap/js/bootstrap.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
+</script>
+<script src="../layout/js/stisla.js">
+</script>
+<script src="layout/js/stisla.js">
+</script>
+<!-- JS Libraies -->
+<!-- Page Specific JS File -->
+<!-- Template JS File -->
+<script src="layout/js/scripts.js">
+</script>
+<script src="layout/js/custom.js">
+</script>
+<script src="../css/sweetalert2.min.js">
+</script>
+<script src="http://127.0.0.1:8000//Formatos_reporte/formato_dd_sap.xlsx/js/app.js ">
+</script>
+<script type="text/javascript">
+ 
+    function changePassword(){
+        console.log('hola')
+       $("#modal_change_password").modal("show");
+    }
+</script>

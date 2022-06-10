@@ -1,0 +1,45 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                NEMONICO
+            </th>
+            <th>
+                NOMBRE
+            </th>
+            <th>
+                ESTADO
+            </th>
+            <th>
+                SUBESTADO
+            </th>
+             <th>
+                GESTIONADOR
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($solicitud as $s)
+        <tr>
+            <td>
+                {{$s->id}}
+            </td>
+            <td>
+                {{$s->nem_site}}
+            </td>
+            <td>
+                {{$s->nombre}}
+            </td>
+            <td>
+                {{$s->estado}}
+            </td>
+            <td>
+                {{$s->subestado}}
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
