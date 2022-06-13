@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Site;
+
 class InventoryController extends Controller
 {
     /**
@@ -14,7 +15,15 @@ class InventoryController extends Controller
      */
     public function getSites()
     {
-        $sites = Site::get(['nem_site','nombre','id','classification_type_id']);
+        $sites = \DB::table('entel_pops.sites as s')
+            ->join('entel_pops.classification_types as c', 'c.id', '=', 's.classification_type_id')
+
+            ->select('s.id', 's.nem_site', 's.nombre', 'c.classification_type')
+            ->get();
+
+
+
+
         return response()->json($sites);
     }
 

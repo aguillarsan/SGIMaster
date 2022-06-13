@@ -201,9 +201,9 @@
                                         Necesita ayuda?
                                     </h2>
                                     <p style="margin: 0;color: white">
-                                        Contaco:
-                                        <a href="mailto:proyectosinfraestructura@entel.cl" style="color: #005CFF;" target="_blank">
-                                            proyectosinfraestructura@entel.cl
+                                        Contacto:
+                                        <a href="mailto:supervisorinfra@entel.cl" style="color: #005CFF;" target="_blank">
+                                            supervisorinfra@entel.cl
                                         </a>
                                     </p>
                                 </td>
