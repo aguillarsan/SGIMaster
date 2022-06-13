@@ -9,8 +9,9 @@ use Illuminate\Support\Facades\Auth;
 use App\role_user;
 use App\Permiso_rol;
 use App\Notifications\ResetPasswordNotification;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable 
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable, HasApiTokens;
 

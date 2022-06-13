@@ -24,10 +24,10 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         try {
             if (!$token = JWTAuth::attempt($credentials)) {
-                return response()->json(['error' => 'invalid_credentials'], 400);
+                return response()->json(['error' => 'credeciales erroneas'], 400);
             }
         } catch (JWTException $e) {
-            return response()->json(['error' => 'could_not_create_token'], 500);
+            return response()->json(['error' => 'no se pudo crear el token'], 500);
         }
 
 
@@ -46,9 +46,10 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        auth()->logout();
-
-        return response()->json(['message' => 'Successfully logged out']);
+        JWTAuth::invalidate();
+        return response()->json([
+            'message' => 'sesión cerrada'
+        ]);
     }
 
     /**
