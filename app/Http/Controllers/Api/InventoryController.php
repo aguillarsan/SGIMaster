@@ -61,17 +61,17 @@ class InventoryController extends Controller
         $data = array();
 
         $data_pop = [
-            'nombre' => 'Pops',
+            'name' => 'Pops',
             'total'  => $total_pop,
             'column' => 0
         ];
         $data_sitio = [
-            'nombre' => 'Sitios',
+            'name' => 'Sitios',
             'total'  => $total_site,
             'column' => 1
         ];
         $data_tec = [
-            'nombre' => 'Tecnologias',
+            'name' => 'Tecnologias',
             'total'  => $total_tech,
             'column' => 2
         ];
