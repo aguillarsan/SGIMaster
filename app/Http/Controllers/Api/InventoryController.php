@@ -58,12 +58,28 @@ class InventoryController extends Controller
         $total_pop = Pop::count();
         $total_site = Site::count();
         $total_tech = Technologie::count();
-        
-        return response()->json([
-            'total_pop' => $total_pop,
-            'total_site' => $total_site,
-            'total_tech' => $total_tech
-        ]);
+        $data = array();
+
+        $data_pop = [
+            'nombre' => 'Pops',
+            'total'  => $total_pop,
+            'columns' => 0
+        ];
+        $data_sitio = [
+            'nombre' => 'Sitios',
+            'total'  => $total_site,
+            'columns' => 1
+        ];
+        $data_tec = [
+            'nombre' => 'Tecnologias',
+            'total'  => $total_tech,
+            'columns' => 2
+        ];
+
+        array_push($data, $data_pop,$data_sitio,$data_tec);
+        return response()->json($data);
+
+      
     }
 
     /**
