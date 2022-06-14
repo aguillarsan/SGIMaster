@@ -22,16 +22,7 @@ class InventoryController extends Controller
             ->get();
 
 
-
-
-       $sites = [
-        'nem_site' => 'aM250',
-        'classification_type' => 'C',
-        'nombre' => 'la araucaria',
-        'id' => 1
-       ];
-
-        return response()->json($sites,200);
+        return response()->json($sites, 200);
     }
 
     /**
@@ -39,9 +30,19 @@ class InventoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function getPops()
     {
-        //
+        $pops = \DB::table('entel_pops.pops as p')
+            ->join('entel_pops.comunas as c', 'c.id', '=', 'p.comuna_id')
+            ->join('entel_pops.regions as r', 'r.id', '=', 'c.region_id')
+
+            ->select('p.id',  'p.nombre', 'r.nombre_region')
+            ->get();
+
+
+
+
+        return response()->json($pops, 200);
     }
 
     /**

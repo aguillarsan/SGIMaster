@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 Route::get('/sites','Api\InventoryController@getSites');
+Route::get('/pops','Api\InventoryController@getPops');
+
 Route::post('login','Api\AuthController@login');
 Route::get('logoutApi','Api\AuthController@logout');
 Route::get('get_ticket_api','Api\TicketController@getTicket');
