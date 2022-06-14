@@ -28,9 +28,9 @@ class DuplicateRequest extends Controller
                 $newRequest->tipo_trabajo_ingenieria_id = $requestOriginal->tipo_trabajo_ingenieria_id;
                 $newRequest->modo_trabajo_id            = $requestOriginal->modo_trabajo_id;
                 if ($requestOriginal->modo_trabajo_id == 1) {
-                    $newRequest->Tipo_equipamiento_id = $requestOriginal->Tipo_equipamiento_id;
+                    $newRequest->tipo_equipamiento_id = $requestOriginal->Tipo_equipamiento_id;
                 } else {
-                    $newRequest->Tipo_servicio_id = $requestOriginal->Tipo_servicio_id;
+                    $newRequest->tipo_servicio_id = $requestOriginal->Tipo_servicio_id;
                 }
                 $newRequest->tipo_servicio_id = $requestOriginal->tipo_servicio_id;
                 $newRequest->tipo_equipamiento_id = $requestOriginal->tipo_equipamiento_id;

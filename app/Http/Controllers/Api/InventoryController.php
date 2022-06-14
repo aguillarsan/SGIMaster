@@ -24,7 +24,14 @@ class InventoryController extends Controller
 
 
 
-        return response()->json($sites);
+       $sites = [
+        'nem_site' => 'aM250',
+        'classification_type' => 'C',
+        'nombre' => 'la araucaria',
+        'id' => 1
+       ];
+
+        return response()->json($sites,200);
     }
 
     /**
