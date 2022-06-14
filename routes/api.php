@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::get('/sites','Api\InventoryController@getSites');
 Route::get('/pops','Api\InventoryController@getPops');
+Route::get('/total/inventario','Api\InventoryController@getTotalInventario');
 
 Route::post('login','Api\AuthController@login');
 Route::get('logoutApi','Api\AuthController@logout');

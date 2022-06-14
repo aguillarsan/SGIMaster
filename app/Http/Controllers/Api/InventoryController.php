@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Site;
+use App\Pop;
+use App\Technologie;
 
 class InventoryController extends Controller
 {
@@ -51,9 +53,17 @@ class InventoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function getTotalInventario()
     {
-        //
+        $total_pop = Pop::count();
+        $total_site = Site::count();
+        $total_tech = Technologie::count();
+        
+        return response()->json([
+            'total_pop' => $total_pop,
+            'total_site' => $total_site,
+            'total_tech' => $total_tech
+        ]);
     }
 
     /**
